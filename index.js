@@ -24,7 +24,7 @@ module.exports = {
 
     "finish": function() {
       var $, $el, html;
-      var pathFile = 'docs/components/header';
+      var pathFile = 'docs/components/header.html';
       var tmpl = '';
 
       if (pathFile && fs.existsSync(pathFile)) tmpl = fs.readFileSync(pathFile, {encoding: 'utf-8'});
