@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "For Gitbook projects: Add html templates to the target selector of your choice. Useful for headers and footers.",
   "engines": {
     "gitbook": ">=3.1.1"
