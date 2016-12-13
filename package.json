@@ -1,0 +1,17 @@
+{
+  "name": "gitbook-plugin-components",
+  "version": "0.0.1",
+  "description": "Add html templates.",
+  "engines": {
+    "gitbook": "^3.1.1"
+  },
+  "gitbook": {
+    "properties": {
+      "myConfigKey": {
+        "type": "string",
+        "default": "it's the default value",
+        "description": "It defines my awesome config!"
+      }
+    }
+  }
+}
