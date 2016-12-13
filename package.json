@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Add html templates.",
   "engines": {
-    "gitbook": "^3.1.1"
+    "gitbook": ">=3.1.1"
   },
   "gitbook": {},
   "main": "index.js",
