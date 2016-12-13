@@ -26,7 +26,7 @@ module.exports = {
       var $, $el, html;
       var templatePath = this.config.get('pluginsConfig.components.templatePath');
       var templates = this.config.get('pluginsConfig.components.templates');
-      var tmpl = '';
+      if (typeof templatePath === 'undefined') templatePath = 'docs/components';
 
       urls.forEach(item => {
         html = fs.readFileSync(item.url, {encoding: 'utf-8'});
