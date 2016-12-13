@@ -24,6 +24,8 @@ gitbook install
 gitbook serve
 ```
 
+## Configuration options
+
 You can see an example config options below for `book.json`.
 
 This will look for `docs/components/header.html` and prepend it to `body`.
@@ -51,3 +53,5 @@ Then it will look for `docs/components/footer.html` and append it to `.book`.
   }
 }
 ```
+
+Default values for `templatePath` is `docs/components` and default for `prepend` is `true`.
