@@ -5,13 +5,23 @@
   "engines": {
     "gitbook": "^3.1.1"
   },
-  "gitbook": {
-    "properties": {
-      "myConfigKey": {
-        "type": "string",
-        "default": "it's the default value",
-        "description": "It defines my awesome config!"
-      }
-    }
-  }
+  "gitbook": {},
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^0.22.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emcarru/gitbook-plugin-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emcarru/gitbook-plugin-components/issues"
+  },
+  "homepage": "https://github.com/emcarru/gitbook-plugin-components#readme"
 }

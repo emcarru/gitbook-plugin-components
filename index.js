@@ -32,7 +32,7 @@ module.exports = {
       urls.forEach(item => {
         html = fs.readFileSync(item.url, {encoding: 'utf-8'});
         $ = cheerio.load(html);
-        $el = $('body .book');
+        $el = $('body');
 
         $el.prepend(tmpl);
 
