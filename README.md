@@ -47,8 +47,7 @@ Then it will look for `docs/components/footer.html` and append it to `.book`.
           "prepend": "false"
         }
       ]
-    },
-    "favicon": "docs/assets/favicon.ico"
+    }
   }
 }
 ```
