@@ -24,17 +24,26 @@ module.exports = {
 
     "finish": function() {
       var $, $el, html;
-      var pathFile = 'docs/components/header.html';
+      var templatePath = this.config.get('pluginsConfig.components.templatePath');
+      var templates = this.config.get('pluginsConfig.components.templates');
       var tmpl = '';
-
-      if (pathFile && fs.existsSync(pathFile)) tmpl = fs.readFileSync(pathFile, {encoding: 'utf-8'});
 
       urls.forEach(item => {
         html = fs.readFileSync(item.url, {encoding: 'utf-8'});
         $ = cheerio.load(html);
-        $el = $('body');
 
-        $el.prepend(tmpl);
+        templates.forEach(template => {
+          var singleTemplatePath = templatePath + '/' + template.name + '.html';
+          if (singleTemplatePath && fs.existsSync(singleTemplatePath)) {
+            var templateHTML = (fs.readFileSync(singleTemplatePath, {encoding: 'utf-8'}));
+            $el = $(template.target);
+            if (template.prepend !== "false") {
+              $el.prepend(templateHTML);
+            } else {
+              $el.append(templateHTML);
+            }
+          }
+        });
 
         fs.writeFileSync(item.url, $.root().html(), {encoding: 'utf-8'});
       })
