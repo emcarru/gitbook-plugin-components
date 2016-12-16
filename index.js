@@ -32,10 +32,13 @@ module.exports = {
         html = fs.readFileSync(item.url, {encoding: 'utf-8'});
         $ = cheerio.load(html);
 
+        $('body').find('.gitbookPluginComponent').remove()
+
         templates.forEach(template => {
           var singleTemplatePath = templatePath + '/' + template.name + '.html';
           if (singleTemplatePath && fs.existsSync(singleTemplatePath)) {
             var templateHTML = (fs.readFileSync(singleTemplatePath, {encoding: 'utf-8'}));
+            templateHTML = '<div class="gitbookPluginComponent">' + templateHTML + '</div>';
             $el = $(template.target);
             if (template.prepend !== "false") {
               $el.prepend(templateHTML);
